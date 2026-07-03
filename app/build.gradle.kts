@@ -1,3 +1,13 @@
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
