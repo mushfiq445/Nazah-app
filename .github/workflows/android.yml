@@ -1,6 +1,8 @@
 name: Build Android APK
 
-on: [push]
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -14,6 +16,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      # এই অংশটি অটোমেটিক gradlew তৈরি করবে
+      - name: Generate Gradle Wrapper
+        run: |
+          gradle wrapper --gradle-version 8.7
+          chmod +x gradlew
 
       - name: Build with Gradle
         run: ./gradlew assembleDebug
