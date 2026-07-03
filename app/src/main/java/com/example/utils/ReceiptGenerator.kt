@@ -67,7 +67,8 @@ object ReceiptGenerator {
 
             document.finishPage(page)
 
-            val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+            // FIXED: Using App-specific external storage to bypass Android 10+ permission restrictions
+            val downloadsDir = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
             val file = File(downloadsDir, "NAZAH_Receipt_${System.currentTimeMillis()}.pdf")
             val outputStream = FileOutputStream(file)
             document.writeTo(outputStream)
@@ -75,7 +76,7 @@ object ReceiptGenerator {
             outputStream.close()
 
             withContext(Dispatchers.Main) {
-                Toast.makeText(context, "Receipt saved to Downloads", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Receipt saved to App Downloads", Toast.LENGTH_LONG).show()
             }
             true
         } catch (e: Exception) {

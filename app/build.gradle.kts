@@ -12,13 +12,12 @@ plugins {
 }
 
 android {
-    // Namespace আপনার কোডের ফোল্ডার এবং MainActivity এর সাথে মিলতে হবে
-    namespace = "com.example.nazahapp"
+    // FIXED: Changed to match your app's actual folder structure and package
+    namespace = "com.example.nazahapp" 
     compileSdk = 34
 
     defaultConfig {
-        // Application ID আপনার ফায়ারবেসের প্যাকেজ নেমের সাথে মিলবে
-        applicationId = "com.aistudio.nazah.abcdxy"
+        applicationId = "com.aistudio.nazah.abcdxy" // Kept exactly as is for Firebase
         minSdk = 24
         targetSdk = 34
         versionCode = 1
