@@ -1,12 +1,9 @@
-
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
 }
-
-
 
 plugins {
     alias(libs.plugins.android.application)
@@ -15,11 +12,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example"
+    namespace = "com.aistudio.nazah.abcdxy"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.nazah"
+        applicationId = "com.aistudio.nazah.abcdxy"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
