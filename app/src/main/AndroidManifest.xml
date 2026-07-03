@@ -7,13 +7,10 @@
     <application
         android:allowBackup="false"
         android:fullBackupContent="false"
-        android:icon="@drawable/nazah_logo"
-        android:roundIcon="@drawable/nazah_logo"
-        android:label="Nazah"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:label="Nazah">
         
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.nazahapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
