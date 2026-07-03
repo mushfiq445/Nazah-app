@@ -12,10 +12,12 @@ plugins {
 }
 
 android {
-    namespace = "com.aistudio.nazah.abcdxy"
+    // Namespace আপনার কোডের ফোল্ডার এবং MainActivity এর সাথে মিলতে হবে
+    namespace = "com.example.nazahapp"
     compileSdk = 34
 
     defaultConfig {
+        // Application ID আপনার ফায়ারবেসের প্যাকেজ নেমের সাথে মিলবে
         applicationId = "com.aistudio.nazah.abcdxy"
         minSdk = 24
         targetSdk = 34
