@@ -17,7 +17,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # এই অংশটি অটোমেটিক gradlew তৈরি করবে
+      - name: Create google-services.json
+        env:
+          GOOGLE_SERVICES: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: echo $GOOGLE_SERVICES > app/google-services.json
+
       - name: Generate Gradle Wrapper
         run: |
           gradle wrapper --gradle-version 8.7
@@ -31,6 +35,3 @@ jobs:
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
-
-
-
